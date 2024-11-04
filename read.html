@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!--    몇월 며칠인지 쓰기-->
+  <title>일기 쓰기</title>
+  <link rel="stylesheet" href="read.css" type="text/css">
+</head>
+<body>
+<main>
+  <!--사이트 이름, 이름, 사진, 캘린터 버튼, 오늘 일기 쓰기, 이미 있으면 수정 -->
+  <section id="menu">
+    <article>
+      <a href="calendar.html" id="title_name">Secret Diary</a>
+    </article>
+    <!--    이름과 사진-->
+    <article id="profile">
+      <img src="image/얄라리-이짜나.png" id="my_photo" alt="Profile Photo">
+      <p>jihyeon</p>
+    </article>
+    <!--    캘린더, 버튼 쓰기 버튼-->
+    <article id="choice_menu">
+      <a href="calendar.html" id="link_home">Calender</a>
+      <a href="diary.html" id="link_write">Write</a>
+    </article>
+  </section>
+  <section id="main_frame">
+    <!--날짜 요일, 수정, 저장 버튼-->
+    <section id="top_container">
+      <article class="date_view">
+        <h3>2024년 10월 22일 화요일</h3>
+      </article>
+      <article class="buttons">
+        <button id="edit" onclick="edit()">
+          <img src="image/수정.png" alt="수정">
+        </button>
+      </article>
+    </section>
+    <section id="main_container">
+      <!--메인 일기 쓰는 곳-->
+      <section id="main_content">
+        <article id="sticker_area">
+        </article>
+        <article class="diary_write">
+          <textarea name="main_write" id="main_write" cols="30" rows="10"  spellcheck="false"></textarea>
+        </article>
+      </section>
+    </section>
+  </section>
+</main>
+<script src="diary.js"></script>
+</body>
+</html>

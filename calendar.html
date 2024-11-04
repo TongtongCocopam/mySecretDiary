@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>My Secret diary</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+<!--사이트 이름, 이름, 사진, 캘린터 버튼, 오늘 일기 쓰기, 이미 있으면 수정 -->
+<!-- 비 효과를 위한 컨테이너 -->
+<div class="ripple-container">
+    <!-- JavaScript로 동적으로 빗방울들이 추가됩니다 -->
+</div>
+<section id="menu">
+    <article>
+        <a href="calendar.html" id="title_name">Secret Diary</a>
+    </article>
+    <!--    이름과 사진-->
+    <article id="profile">
+        <img src="image/얄라리-이짜나.png" id="my_photo" alt="Profile Photo">
+        <p>jihyeon</p>
+    </article>
+    <!--    캘린더, 버튼 쓰기 버튼-->
+    <article id="choice_menu">
+        <a href="calendar.html" id="link_home">Calender</a>
+        <a href="diary.html" id="link_write">Write</a>
+    </article>
+</section>
+<!--캘린터 년도 , 월 선택 가능하게-->
+<section id="Calender_choice">
+    <!--    캘린더 이름 표시-->
+    <article id="Calender_name">
+        <p>Calender</p>
+    </article>
+    <!--    년도 선택-->
+    <article id="choice_year">
+        <button id="left_button">
+            <img src="image/left.png" alt="캘린더의 이전연도로 이동하기 위한 좌클릭 버튼">
+        </button>
+        <p></p>
+        <button id="right_button">
+            <img src="image/right.png" alt="캘린더의 다음연도로 이동하기 위한 우클릭 버튼">
+        </button>
+    </article>
+    <!--    달 선택-->
+    <article id="choice_month">
+    </article>
+</section>
+<!--선택한 캘린터 띄워주기-->
+<section id="main_calendar">
+    <!--    오늘 날짜 월, 일, 요일 띄우기-->
+    <article>
+        <p class="calendar_date_view">11월 3일</p>
+    </article>
+    <!--    달력 그대로 띄우기-->
+    <article class="calendar_container">
+        <section class="calendar_wrapper">
+            <section class="calendar_head_section">
+                <p>SUN</p>
+                <p>MON</p>
+                <p>TUE</p>
+                <p>WED</p>
+                <p>THU</p>
+                <p>FRI</p>
+                <p>SAI</p>
+            </section>
+            <section class="calendar_body_section">
+            </section>
+        </section>
+    </article>
+</section>
+
+<!--<div id="inverse-circle"></div>-->
+<script src="index.js"></script>
+</body>
+</html>

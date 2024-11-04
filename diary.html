@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--    몇월 며칠인지 쓰기-->
+    <title>일기 쓰기</title>
+    <link rel="stylesheet" href="diary.css" type="text/css">
+</head>
+<body>
+<main>
+    <!--사이트 이름, 이름, 사진, 캘린터 버튼, 오늘 일기 쓰기, 이미 있으면 수정 -->
+    <section id="menu">
+        <article>
+            <a href="calendar.html" id="title_name">Secret Diary</a>
+        </article>
+        <!--    이름과 사진-->
+        <article id="profile">
+            <img src="image/얄라리-이짜나.png" id="my_photo" alt="Profile Photo">
+            <p>jihyeon</p>
+        </article>
+        <!--    캘린더, 버튼 쓰기 버튼-->
+        <article id="choice_menu">
+            <a href="calendar.html" id="link_home">Calender</a>
+            <a href="diary.html" id="link_write">Write</a>
+        </article>
+    </section>
+    <section id="main_frame">
+        <!--날짜 요일, 수정, 저장 버튼-->
+        <section id="top_container">
+            <article class="date_view">
+                <h3>2024년 10월 22일 화요일</h3>
+            </article>
+            <article class="buttons">
+
+                <button id="save" onclick="save()">
+                    <img src="image/저장.png" alt="저장">
+                </button>
+            </article>
+        </section>
+        <section id="main_container">
+            <!--종이 변경, 스티커, 폰트 변경 -->
+            <section class="design_container">
+                <article class="design_box font">
+                    <section class="design_section">
+                        <h3>font</h3>
+                        <section>
+                            <label for="font_select">폰트 변경 : </label>
+                            <select name="font_select" id="font_select" onchange="font_select()">
+                                <option value="1">a개구쟁이</option>
+                                <option value="2">a개똥벌레</option>
+                                <option value="3">a꽃피는봄</option>
+                                <option value="4">a내손글씨M</option>
+                                <option value="5">a말괄량이</option>
+                                <option value="6">a발레리나</option>
+                            </select>
+                        </section>
+                        <section>
+                            <label for="font_size_setting">폰트 크기 :
+                                <input id="font_size_setting" type="number" value=20 onchange="font_size_setting()">
+                            </label>
+                        </section>
+                    </section>
+                </article>
+                <article class="design_box paper">
+                    <section class="design_section">
+                        <h3>paper</h3>
+                        <article class="items">
+<!--                            <img src="imgs/paper/mini/1.png" alt="줄노트" onclick="paperChange('imgs/paper/1.png')">-->
+<!--                            <img src="imgs/paper/mini/2.png" alt="줄노트" onclick="paperChange('imgs/paper/2.png')">-->
+<!--                            <img src="imgs/paper/mini/3.png" alt="줄노트" onclick="paperChange('imgs/paper/3.png')">-->
+<!--                            <img src="imgs/paper/mini/4.png" alt="줄노트" onclick="paperChange('imgs/paper/4.png')">-->
+<!--                            <img src="imgs/paper/mini/5.png" alt="줄노트" onclick="paperChange('imgs/paper/5.png')">-->
+<!--                            <img src="imgs/paper/mini/6.png" alt="줄노트" onclick="paperChange('imgs/paper/6.png')">-->
+<!--                            <img src="imgs/paper/mini/7.png" alt="줄노트" onclick="paperChange('imgs/paper/7.png')">-->
+<!--                            <img src="imgs/paper/mini/8.png" alt="줄노트" onclick="paperChange('imgs/paper/8.png')">-->
+<!--                            <img src="imgs/paper/mini/10.png" alt="줄노트" onclick="paperChange('imgs/paper/10.png')">-->
+<!--                            <img src="imgs/paper/mini/11.png" alt="줄노트" onclick="paperChange('imgs/paper/11.png')">-->
+<!--                            <img src="imgs/paper/mini/12.png" alt="줄노트" onclick="paperChange('imgs/paper/12.png')">-->
+<!--                            <img src="imgs/paper/mini/9.png" alt="줄노트" onclick="paperChange('imgs/paper/9.png')">-->
+                        </article>
+                    </section>
+                </article>
+
+            </section>
+            <!--메인 일기 쓰는 곳-->
+            <section id="main_content">
+                <article id="sticker_area">
+                </article>
+                <article class="diary_write">
+                    <textarea name="main_write" id="main_write" cols="30" rows="10"  spellcheck="false"></textarea>
+                </article>
+            </section>
+            <section class="design_container">
+                <article class="design_box sticker">
+                    <section class="design_section">
+                        <h3>스티커</h3>
+                        <article class="items">
+<!--                            <img src="imgs/sticker/1.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/2.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/3.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/4.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/5.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/6.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/7.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/8.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/9.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/10.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/11.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/12.png" alt="꽃" draggable="true">-->
+<!--                            <img src="imgs/sticker/13.png" alt="꽃" draggable="true">-->
+                        </article>
+                    </section>
+                </article>
+            </section>
+        </section>
+    </section>
+</main>
+<script src="diary.js"></script>
+</body>
+</html>

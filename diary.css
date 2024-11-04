@@ -1,0 +1,419 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@font-face {
+    font-family: 'a개구쟁이';
+    src: url("fonts/a개구쟁이.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'a개똥벌레';
+    src: url("fonts/a개똥벌레.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'a꽃피는봄';
+    src: url("fonts/a꽃피는봄.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'a내손글씨M';
+    src: url("fonts/a내손글씨M.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'a말괄량이';
+    src: url("fonts/a말괄량이.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'a발레리나';
+    src: url("fonts/a발레리나.ttf") format("truetype");
+}
+
+.font1 {
+    font-family: "a개구쟁이", serif;
+}
+.font2 {
+    font-family: "a개똥벌레", monospace;
+}
+.font3 {
+    font-family: "a꽃피는봄", serif;
+}
+.font4 {
+    font-family: "a내손글씨M", serif;
+}
+.font5 {
+    font-family: "a말괄량이", sans-serif;
+}
+.font6 {
+    font-family: "a발레리나", sans-serif;
+}
+/*______________________________________________________*/
+* {
+    font-family: a개구쟁이, serif;
+    font-weight: lighter;
+}
+
+/* main */
+body {
+    margin: 0;
+}
+
+/*홈, write페이지 버튼*/
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+/* 선택 메뉴 화면 */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: rgba(227, 190, 121, 0.41);
+    padding: 20px 0;
+}
+
+/*제목 폰트, 사이즈*/
+#title_name {
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+/* 프로필 섹션 스타일 */
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/*사진*/
+#my_photo {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+#profile p {
+    font-family: a개구쟁이, serif;
+    font-size: 20px;
+
+}
+
+/*calender, write선택지*/
+#choice_menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#choice_menu a {
+    font-family: a개구쟁이, serif;
+    font-size: 25px;
+    padding: 20px 100px 20px 80px;
+    margin: 0;
+    /*text-decoration: none;*/
+    /*text-align: left;*/
+    color: #000;
+    display: block;
+}
+
+#link_home {
+    background-color: rgb(189, 176, 148);
+}
+
+#link_write {
+    background: rgb(234, 217, 195);
+}
+
+#link_write:hover {
+    background-color: rgb(211, 193, 164);
+}
+/*______________________________________________________*/
+/*글쓰거나 수정하는 부분*/
+#main_frame {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(237, 226, 216, 0.71);
+}
+
+/* 상단 영역 설정 */
+#top_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top_container .date_view {
+    padding: 10px;
+    margin-left: 20px;
+}
+/*저장, 수정 버튼*/
+#top_container .buttons button {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #dcd0c8;
+}
+
+#top_container .buttons button:hover {
+    cursor: pointer;
+    background-color: #e1c4c4;
+}
+/*______________________________________________________*/
+
+.label-section {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* 하단(메인) 영역 스타일 설정 */
+#main_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: -webkit-fill-available;
+}
+/*폰트, 종이, 스티커*/
+#main_container .design_container {
+    max-width: 380px;
+    min-width: 380px;
+    min-height: 700px;
+    overflow-y: auto;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color: rgba(228, 221, 204, 0.6);
+}
+
+#main_container #main_content {
+    width: -webkit-fill-available;
+    overflow: hidden;
+}
+/*______________________________________________________*/
+/* 메인 좌측 디자인 영역 스타일 */
+.design_box {
+    padding: 10px;
+}
+
+.items {
+    max-height: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.design_box.paper .items img {
+    width: 70px;
+    height: 100px;
+    margin: 3px;
+    /*border: 1px solid #000000;*/
+}
+
+.design_box.paper .items img:hover {
+    cursor: pointer;
+    scale: calc(1.03);
+}
+
+.design_box .design_section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.design_box .design_section > h3 {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* 스티커 디자인 설정 */
+.design_box.sticker .items img {
+    width: 69px;
+    margin: 7px;
+    /*border: 1px solid #000000;*/
+}
+
+.sticker-item{
+    position: absolute;
+    /*cusor:move;*/
+    width: 100px;
+    height: 100px;
+}
+
+.sticker-item:hover{
+    cursor: pointer;
+}
+
+
+.design_box.sticker .items img:hover {
+    cursor: pointer;
+    scale: calc(1.03);
+}
+
+/* 폰트 디자인 설정 */
+.design_box.font select, input[type=number] {
+    height: 40px;
+    width: 230px;
+    font-size: 17px;
+}
+
+.font_sort_section {
+    display: flex;
+}
+
+/* 기본 라디오 버튼 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+
+/* 라벨을 아이콘처럼 보이게 스타일링 */
+.radio-label {
+    font-size: 24px; /* 아이콘 크기 조절 */
+    cursor: pointer;
+    padding: 5px;
+    color: #888; /* 기본 색상 */
+    transition: color 0.3s;
+}
+
+/* 선택된 아이콘 강조 */
+input[type="radio"]:checked + .radio-label {
+    color: #3498db; /* 선택된 색상 */
+}
+
+/* 메인 write */
+.write_setting_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+article.diary_write {
+    width: 100%;
+    height: 100%;
+}
+
+#main_write {
+    width: 500px;
+    height: 100%;
+    max-width: 550px;
+    max-height: 100%;
+    resize: none;
+    padding: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    background-image: url("imgs/paper/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+
+    position: relative;
+}
+
+/*버튼 사이즈*/
+.buttons img {
+    width: 20px;
+    height: 20px;
+}
+
+.buttons{
+    gap: 10px;
+    padding-right: 30px;
+}
+
+/*______________________________________________________*/
+/*스티커 저장할 곳*/
+#sticker_area {
+    position: absolute;
+    overflow: hidden;
+    width: 500px;
+    height: 88%;
+    max-width: 550px;
+    max-height: 88%;
+    padding: 8px;
+    /* box-sizing: border-box; */
+    z-index: 1;
+}
+.sticker-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+}
+
+.sticker-wrapper:hover > .delete-button{
+    display: block;
+}
+
+.delete-button {
+    display: none;
+    position: relative;
+    right: 10px;
+    background: rgba(246, 241, 241, 0.32);
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background: #838383;
+}
+
+/*______________________________________________________*/
+/*폰트 ui변경*/
+/* 폰트와 폰트 크기 선택 박스 스타일링 */
+.design_box.font select{
+    height: 40px;
+    width: 220px;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: 1px solid #dcd0c8;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"] {
+    height: 30px;
+    width: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: 1px solid #dcd0c8;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.design_box.font select:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
